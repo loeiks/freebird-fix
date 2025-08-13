@@ -37,20 +37,13 @@ async function getIndexedDBData() {
     // Get HEX codes of the selected theme.
     const userSelectedTheme = await Promise.resolve(getColor);
     switch (userSelectedTheme) {
-      case 'blue500':
-        return '#1d9bf0';
-      case 'yellow500':
-        return '#ffd400';
-      case 'magenta500':
-        return '#f91880';
-      case 'purple500':
-        return '#7856ff';
-      case 'orange500':
-        return '#ff7a00';
-      case 'green500':
-        return '#00ba7c';
-      default:
-        return '#1d9bf0';
+      case 'blue500': return '#1d9bf0';
+      case 'yellow500': return '#ffd400';
+      case 'magenta500': return '#f91880';
+      case 'purple500': return '#7856ff';
+      case 'orange500': return '#ff7a00';
+      case 'green500': return '#00ba7c';
+      default: return '#1d9bf0';
     }
   } catch (err) {
     console.error('Error retrieving color:', err);
